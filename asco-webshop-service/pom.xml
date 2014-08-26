@@ -8,10 +8,11 @@
         <artifactId>asco-webshop</artifactId>
         <groupId>pl.asco</groupId>
         <version>1.0</version>
+        <relativePath>../asco-webshop</relativePath>
     </parent>
 
     <modelVersion>4.0.0</modelVersion>
-    <artifactId>asco-webhop-service</artifactId>
+    <artifactId>asco-webshop-service</artifactId>
     <name>Asco Webshop Service</name>
 
 </project>
