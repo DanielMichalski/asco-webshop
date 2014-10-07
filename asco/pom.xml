@@ -21,9 +21,13 @@
     </modules>
 
     <properties>
-        <spring.version>3.2.9.RELEASE</spring.version>
-        <hibernate.version>3.6.7.Final</hibernate.version>
+        <spring.version>4.0.0.RELEASE</spring.version>
+        <hibernate.version>4.2.2.Final</hibernate.version>
         <spring-security.version>3.1.0.RELEASE</spring-security.version>
+        <spring-data-jpa.version>1.5.0.RELEASE</spring-data-jpa.version>
+        <junit.version>4.11</junit.version>
+        <postgresql.version>9.2-1002-jdbc4</postgresql.version>
+        <slf4j.version>1.7.5</slf4j.version>
     </properties>
 
     <dependencies>
@@ -82,7 +86,7 @@
         <dependency>
             <groupId>org.springframework.data</groupId>
             <artifactId>spring-data-jpa</artifactId>
-            <version>1.5.0.RELEASE</version>
+            <version>${spring-data-jpa.version}</version>
         </dependency>
 
         <dependency>
@@ -106,20 +110,14 @@
         <dependency>
             <groupId>org.springframework.security</groupId>
             <artifactId>spring-security-config</artifactId>
-            <version>3.1.4.RELEASE</version>
+            <version>${spring-security.version}</version>
         </dependency>
 
         <!-- JUnit -->
         <dependency>
-            <groupId>org.springframework</groupId>
-            <artifactId>spring-context-support</artifactId>
-            <version>${spring.version}</version>
-        </dependency>
-
-        <dependency>
             <groupId>junit</groupId>
             <artifactId>junit</artifactId>
-            <version>4.8.2</version>
+            <version>${junit.version}</version>
             <scope>test</scope>
         </dependency>
 
@@ -147,7 +145,7 @@
         <dependency>
             <groupId>org.postgresql</groupId>
             <artifactId>postgresql</artifactId>
-            <version>9.2-1002-jdbc4</version>
+            <version>${postgresql.version}</version>
         </dependency>
 
         <!-- JPA -->
@@ -175,19 +173,19 @@
         <dependency>
             <groupId>org.slf4j</groupId>
             <artifactId>slf4j-api</artifactId>
-            <version>1.7.5</version>
+            <version>${slf4j.version}</version>
         </dependency>
 
         <dependency>
             <groupId>org.slf4j</groupId>
             <artifactId>slf4j-simple</artifactId>
-            <version>1.6.4</version>
+            <version>${slf4j.version}</version>
         </dependency>
 
         <dependency>
             <groupId>org.slf4j</groupId>
             <artifactId>slf4j-log4j12</artifactId>
-            <version>1.7.5</version>
+            <version>${slf4j.version}</version>
         </dependency>
 
         <dependency>
