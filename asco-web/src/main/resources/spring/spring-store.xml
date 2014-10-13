@@ -33,7 +33,6 @@
         <entry key="hibernate.dialect" value="org.hibernate.dialect.PostgresPlusDialect"/>
         <entry key="hibernate.hbm2ddl.auto" value="update"/>
         <entry key="hibernate.show_sql" value="true"/>
-        <entry key="hibernate.jdbc.batch_size" value="0"/>
     </util:map>
 
     <bean id="hibernateJpaVendorAdapter" class="org.springframework.orm.jpa.vendor.HibernateJpaVendorAdapter"/>
