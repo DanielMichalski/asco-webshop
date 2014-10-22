@@ -1,5 +1,6 @@
 package pl.asco.webshop.web.controller;
 
+import org.slf4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -8,6 +9,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import pl.asco.webshop.common.model.Person;
+import pl.asco.webshop.common.util.AutowiredLogger;
 import pl.asco.webshop.repositories.PersonRepository;
 import pl.asco.webshop.repositories.TeamRepository;
 
@@ -19,6 +21,9 @@ import javax.validation.Valid;
 @Controller
 @RequestMapping("/person")
 public class PersonController {
+
+    @AutowiredLogger
+    private Logger logger;
 
     @Autowired
     private PersonRepository personRepository;

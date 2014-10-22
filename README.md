@@ -14,5 +14,6 @@ It contains some useful configuration items:
 - Spring Data Repositories
 - JPA + Hibernate
 - Spring Security
-- Logger
-- Tests
+- Autowired logger
+- Spring tests
+- Multi-module project
