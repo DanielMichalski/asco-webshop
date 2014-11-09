@@ -2,14 +2,11 @@
 <beans xmlns="http://www.springframework.org/schema/beans"
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
        xmlns:jpa="http://www.springframework.org/schema/data/jpa"
-       xmlns:util="http://www.springframework.org/schema/util"
        xmlns:tx="http://www.springframework.org/schema/tx"
        xsi:schemaLocation="http://www.springframework.org/schema/beans
                http://www.springframework.org/schema/beans/spring-beans.xsd
                http://www.springframework.org/schema/data/jpa
                http://www.springframework.org/schema/data/jpa/spring-jpa.xsd
-               http://www.springframework.org/schema/util
-               http://www.springframework.org/schema/util/spring-util.xsd
                http://www.springframework.org/schema/tx
                http://www.springframework.org/schema/tx/spring-tx.xsd">
 
@@ -25,17 +22,17 @@
     <bean id="entityManagerFactory" class="org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean">
         <property name="packagesToScan" value="pl.asco.webshop.common.model"/>
         <property name="dataSource" ref="dataSource"/>
-        <property name="jpaVendorAdapter" ref="hibernateJpaVendorAdapter"/>
-        <property name="jpaPropertyMap" ref="jpaPropertyMap"/>
+        <property name="jpaVendorAdapter">
+            <bean class="org.springframework.orm.jpa.vendor.HibernateJpaVendorAdapter"/>
+        </property>
+        <property name="jpaPropertyMap">
+            <map>
+                <entry key="hibernate.dialect" value="org.hibernate.dialect.PostgresPlusDialect"/>
+                <entry key="hibernate.hbm2ddl.auto" value="update"/>
+                <entry key="hibernate.show_sql" value="true"/>
+            </map>
+        </property>
     </bean>
-
-    <util:map id="jpaPropertyMap">
-        <entry key="hibernate.dialect" value="org.hibernate.dialect.PostgresPlusDialect"/>
-        <entry key="hibernate.hbm2ddl.auto" value="update"/>
-        <entry key="hibernate.show_sql" value="true"/>
-    </util:map>
-
-    <bean id="hibernateJpaVendorAdapter" class="org.springframework.orm.jpa.vendor.HibernateJpaVendorAdapter"/>
 
     <bean id="transactionManager" class="org.springframework.orm.jpa.JpaTransactionManager">
         <property name="entityManagerFactory" ref="entityManagerFactory"/>
