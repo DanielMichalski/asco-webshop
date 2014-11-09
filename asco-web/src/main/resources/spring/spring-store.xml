@@ -27,9 +27,9 @@
         </property>
         <property name="jpaPropertyMap">
             <map>
-                <entry key="hibernate.dialect" value="org.hibernate.dialect.PostgresPlusDialect"/>
-                <entry key="hibernate.hbm2ddl.auto" value="update"/>
-                <entry key="hibernate.show_sql" value="true"/>
+                <entry key="hibernate.dialect" value="${hibernate.dialect}"/>
+                <entry key="hibernate.hbm2ddl.auto" value="${hibernate.hbm2ddl.auto}"/>
+                <entry key="hibernate.show_sql" value="${hibernate.show_sql}"/>
             </map>
         </property>
     </bean>
