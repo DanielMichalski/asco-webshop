@@ -37,7 +37,7 @@
                 </li>
                 <li><a href="#">O sklepie</a></li>
                 <li><a href="#">Kontakt</a></li>
-                <li><a href="${pageContext.request.contextPath}/person/add">Zaloguj</a></li>
+                <li><a href="${pageContext.request.contextPath}/login">Zaloguj</a></li>
             </ul>
         </div>
     </div>

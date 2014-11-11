@@ -15,4 +15,16 @@
         <put-attribute name="current" value="index"/>
     </definition>
 
+    <definition name="register" extends="common">
+        <put-attribute name="title" value="ASCO - Rejestracja"/>
+        <put-attribute name="body" value="/WEB-INF/pages/register.jsp"/>
+        <put-attribute name="current" value="register"/>
+    </definition>
+
+    <definition name="login" extends="common">
+        <put-attribute name="title" value="ASCO - Logowanie"/>
+        <put-attribute name="body" value="/WEB-INF/pages/login.jsp"/>
+        <put-attribute name="current" value="login"/>
+    </definition>
+
 </tiles-definitions>
