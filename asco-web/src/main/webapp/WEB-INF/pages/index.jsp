@@ -1,9 +1,10 @@
+<%@ taglib prefix="spring" uri="http://www.springframework.org/tags" %>
 <%@ page language="java" contentType="text/html;charset=UTF-8" pageEncoding="UTF-8" %>
 
 <div class="container">
     <div class="jumbotron">
         <div align="center">
-            <h1>Witamy w naszym sklepie</h1>
+            <h1><spring:message code="page.index.welcome"/></h1>
 
             <p>
                 Już niedługo będzie można w nim kupić produkty o jakich sobie tylko wymarzysz

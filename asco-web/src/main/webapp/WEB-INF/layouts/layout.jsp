@@ -12,9 +12,12 @@
 </head>
 
 <body>
+
+Language : <a href="?lang=pl">Polish</a> | <a href="?lang=en">English</a>
+
 <div class="navbar navbar-inverse navbar-static-top">
     <div class="container">
-        <a href="#" class="navbar-brand">ASCO</a>
+        <a href="${pageContext.servletContext.contextPath}/" class="navbar-brand">ASCO</a>
 
         <button class="navbar-toggle" data-toggle="collapse" data-target=".navHeaderCollapse">
             <span class="icon-bar"></span>
@@ -37,6 +40,7 @@
                 </li>
                 <li><a href="#">O sklepie</a></li>
                 <li><a href="#">Kontakt</a></li>
+                <li><a href="${pageContext.request.contextPath}/register">Rejestracja</a></li>
                 <li><a href="${pageContext.request.contextPath}/login">Zaloguj</a></li>
             </ul>
         </div>

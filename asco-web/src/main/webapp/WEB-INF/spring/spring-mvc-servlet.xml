@@ -15,9 +15,28 @@
 
     <mvc:resources mapping="/resources/**" location="/resources/"/>
 
+    <context:property-placeholder location="classpath:properties/app.properties"/>
+
+    <bean id="messageSource" class="org.springframework.context.support.ReloadableResourceBundleMessageSource">
+        <property name="basename" value="classpath:properties/messages"/>
+        <property name="defaultEncoding" value="UTF-8"/>
+    </bean>
+
+    <mvc:interceptors>
+        <bean class="org.springframework.web.servlet.i18n.LocaleChangeInterceptor">
+            <property name="paramName" value="lang"/>
+        </bean>
+    </mvc:interceptors>
+
+    <bean id="localeResolver" class="org.springframework.web.servlet.i18n.SessionLocaleResolver">
+        <property name="defaultLocale" value="pl"/>
+    </bean>
+
     <bean id="tilesConfigurer" class="org.springframework.web.servlet.view.tiles3.TilesConfigurer">
         <property name="definitions">
-            <value>/WEB-INF/defs/general.xml</value>
+            <list>
+                <value>/WEB-INF/defs/general.xml</value>
+            </list>
         </property>
     </bean>
 
