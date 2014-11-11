@@ -9,11 +9,12 @@ Main module is asco so if You want to run projetc open asco module using Maven.
 
 It contains some useful configuration items:
 
-- Proper handling of UTF-8 encoding in forms
 - Spring MVC
 - Spring Data Repositories
 - JPA + Hibernate
 - Spring Security
+- Twitter Bootstrap
+- Apache tiles
 - Autowired logger
-- Spring tests
+- Internationalization
 - Multi-module project
