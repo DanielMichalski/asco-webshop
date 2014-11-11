@@ -15,4 +15,18 @@
     <artifactId>asco-service</artifactId>
     <name>Asco Service</name>
 
+    <dependencies>
+        <dependency>
+            <groupId>pl.asco.webshop</groupId>
+            <artifactId>asco-common</artifactId>
+            <version>1.0</version>
+        </dependency>
+
+        <dependency>
+            <groupId>pl.asco.webshop</groupId>
+            <artifactId>asco-repositories</artifactId>
+            <version>1.0</version>
+        </dependency>
+    </dependencies>
+
 </project>
